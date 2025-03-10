@@ -538,7 +538,7 @@ const Hero = () => {
 
   return (
     <div
-      id="hero-section"
+      id="home"
       className="min-h-[550px] sm:min-h-[650px] relative overflow-hidden flex justify-center items-center text-white duration-200"
     >
       {/* Enhanced Job-themed Particle Background Canvas */}
@@ -550,7 +550,7 @@ const Hero = () => {
       <div className="container flex justify-center items-center h-full relative z-10">
         {/* Content without background box */}
         <div className="w-full max-w-2xl text-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mt-[-10px] text-glow">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mt-[-10px] text-glow leading-relaxed">
             <span
               className={`inline-block transition-all duration-700 ${headingVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-110'}`}
             >
@@ -560,22 +560,16 @@ const Hero = () => {
               <span
                 className={`inline-block transition-all duration-700 ml-2 ${showQuickHireSL ? 'opacity-100' : 'opacity-0'} ${showQuickHireSL ? 'scale-100' : 'scale-110'}`}
               >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 glow-text">
+                <span className="text-blue-500 blue-glow">
                   QuickHireSL
                 </span>
               </span>
             )}
           </h1>
 
-          {/* <p
-            className={`text-lg max-w-xl mx-auto mt-6 transition-all duration-1000 ease-out text-glow-soft ${showDescription ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-          >
-            QuickHireSL – A smart job-matching platform designed to empower university students with flexible and short-term employment opportunities!
-          </p> */}
-
           {/* Typing Animation Container */}
           {typingStarted && (
-            <div className="h-16 flex justify-center items-center my-5">
+            <div className="h-16 flex justify-center items-center my-8">
               <div className="text-xl font-semibold text-glow-soft">
                 {displayedText}
                 <span className="blinking-cursor">|</span>
@@ -654,6 +648,16 @@ const Hero = () => {
         
         .glow-text {
           filter: drop-shadow(0 0 8px rgba(104, 109, 224, 0.8));
+        }
+        
+        .blue-glow {
+          text-shadow: 0 0 10px rgba(59, 130, 246, 0.7), 
+                       0 0 20px rgba(59, 130, 246, 0.5), 
+                       0 0 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .leading-relaxed {
+          line-height: 1.5;
         }
       `}</style>
     </div>
